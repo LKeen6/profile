@@ -1,4 +1,3 @@
-// next image
 import Image from 'next/image';
 
 //next link
@@ -14,7 +13,9 @@ const Header = () => {
         <div className='flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8'>
           {/* logo */}
           <Link href={'/'}>
-            <div className='text-5xl'>Landon Keen</div>
+            <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
+              Landon Keen
+            </div>
           </Link>
           {/* socials */}
           <Socials/>

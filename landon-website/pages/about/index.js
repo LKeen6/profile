@@ -81,7 +81,6 @@ const aboutData = [
 
 //components
 import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
 
 // framer motion
 import {motion} from 'framer-motion';
@@ -98,10 +97,9 @@ const About = () => {
   console.log(index);
   return (
     
-    <div className='h-full bg-[#a39968] bg-gradient-to-r from-primary/5 via-black/5 to-black/40 py-32 text-center xl:text-left'>
+    <div className='w-screen h-screen bg-[#a39968] bg-gradient-to-r from-primary/5 via-black/5 to-black/40 py-32 text-center xl:text-left'>
        {/* Particles */}
-       <ParticlesContainer className="absolute top-0 left-0 w-full h-full z-0" />
-      <Circles/>
+       <ParticlesContainer/>
       {/* avatar img */}
       <motion.div 
         variants={fadeIn('right', 0.2)}
@@ -132,7 +130,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+With a strong foundation in both front-end and back-end development, I bring a diverse skill set to the table. I’m proficient in modern frameworks and libraries like React (with TypeScript), Next.js, and Bootstrap 5, crafting responsive and interactive user interfaces. On the back-end, I have solid experience with Node.js, PHP, and MySQL, ensuring efficient and scalable server-side solutions.
           </motion.p>
 
           {/* counters */}
@@ -144,20 +142,20 @@ const About = () => {
             className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'
           >
             <div className='flex flex-1 xl: gap-x-6'>
-            {/* experience */}
+            {/* experience
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl front-extrabold text-[#19471f] mb-2'>
                   <CountUp start={0} end={3} duration={10} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100]'>Years of experience</div>
-              </div>
-              {/* finished projects */}
+              </div> */}
+              {/* finished projects
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl front-extrabold text-[#19471f] mb-2'>
                   <CountUp start={0} end={10} duration={10} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100]'>finished projects</div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

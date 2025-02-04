@@ -25,7 +25,7 @@ const Work = () => {
                 initial="hidden"
                 animate="show"
                 exit="hidden"
-                className="h2 xl:mt-12"
+                className="h2 xl:mt-12 mt-28"
               >
                 My work <span className="text-[#a39968]">.</span>
               </motion.h2>
@@ -36,7 +36,7 @@ const Work = () => {
                 exit="hidden"
                 className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+               Checkout my latest projects 
               </motion.p>
             </div>
 
