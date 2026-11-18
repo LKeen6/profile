@@ -36,7 +36,7 @@ const Work = () => {
                 exit="hidden"
                 className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                This collection showcases a variety of projects I've developed to demonstrate my growing experience in web development and programming. From building responsive interfaces using HTML, CSS, and Bootstrap to developing an interactive application with Python and Streamlit, each project highlights different aspects of my technical skill set.<br/><br/>The Streamlit application goes beyond basic functionality, incorporating CRUD operations, user authentication, data encryption, and database integration.<br/><br/>This portfolio itself was built using Next.js, reflecting my continued interest in learning and working with modern web technologies.
               </motion.p>
             </div>
 

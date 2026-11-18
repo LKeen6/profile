@@ -7,21 +7,18 @@ export const workSlider = {
           title: 'Card Layout',
           path: '/thumb1.jpg',
           link: 'https://film-search-udim.onrender.com/'
-        },
-        {
+        }, {
           title: 'Animated Cards',
           path: '/thumb2.jpg',
           link: 'https://card-layout.onrender.com'
-        },
-        {
+        }, {
           title: 'Your Future',
           path: '/thumb3.jpg',
           link: 'https://css-cards.onrender.com'
-        },
-        {
-          title: 'Mapty',
-          path: '/thumb4.jpg',
-          link: 'https://mapty-nl5z.onrender.com/'
+        }, {
+          title: 'Streamlit User Management',
+          path: '/StreamlitCrud.jpg',
+          link: 'https://streamlit-crud-1ctn.onrender.com'
         },
       ],
     }
@@ -43,9 +40,23 @@ import { Pagination } from 'swiper';
 import { BsArrowRight } from 'react-icons/bs';
 // next image
 import Image from 'next/image';
-import Link from 'next/link';
 
 const WorkSlider = () => {
+  const openDemo = (event, url) => {
+    event.preventDefault();
+
+    const width = 900;
+    const height = 700;
+    const left = Math.max(0, (window.screen.width - width) / 2);
+    const top = Math.max(0, (window.screen.height - height) / 2);
+
+    window.open(
+      url,
+      '_blank',
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    );
+  };
+
   return (
     <div>
       <Swiper
@@ -60,7 +71,13 @@ const WorkSlider = () => {
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {slide.images.map((image, index) => (
-                <Link href={image.link} key={index}>
+                <button
+                  type="button"
+                  key={index}
+                  onClick={(event) => openDemo(event, image.link)}
+                  className="text-left"
+                  aria-label={`Open ${image.title} demo`}
+                >
                   <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       <div className="relative w-[500px] h-[250px]">
@@ -86,7 +103,7 @@ const WorkSlider = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </button>
               ))}
             </div>
           </SwiperSlide>

@@ -9,12 +9,15 @@ import {
   FaWordpress,
   FaFigma,
   FaPhp,
+  FaPython
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
   SiAdobexd,
-  SiAdobephotoshop
+  SiAdobephotoshop,
+  SiStreamlit,
+  SiMysql
 } from "react-icons/si";
 
 
@@ -26,45 +29,59 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <BsBootstrap/>,
-          <FaPhp/>,
-          <SiNextdotjs />,
-          <FaWordpress />,
+          {
+            icon: <FaPython />,
+            name: 'Python'
+          }, {
+            icon: <SiStreamlit />,
+            name: 'Streamlit'
+          }, {
+            icon: <FaReact />,
+            name: 'React'
+          }, {
+            icon: <SiNextdotjs />,
+            name: 'Next.js'
+          }, {
+            icon: <FaPhp />,
+            name: 'PHP'
+          }, {
+            icon: <FaHtml5 />,
+            name: 'HTML5'
+          }, {
+            icon: <FaCss3 />,
+            name: 'CSS3'
+          }, {
+            icon: <FaJs />,
+            name: 'JavaScript'
+          }, {
+            icon: <BsBootstrap />,
+            name: 'Bootstrap'
+          }, {
+            icon: <SiMysql />,
+            name: 'MySQL'
+          },
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          { icon: <FaFigma />, name: 'Figma' },
+          { icon: <SiAdobexd />, name: 'Adobe XD' },
+          { icon: <SiAdobephotoshop />, name: 'Adobe Photoshop' }
+        ],
       },
     ],
   },
-  // {
-  //   title: 'awards',
-  //   info: [
-  //     {
-  //       title: 'Webby Awards - Honoree',
-  //       stage: '2011 - 2012',
-  //     },
-  //     {
-  //       title: 'Adobe Design Achievement Awards - Finalist',
-  //       stage: '2009 - 2010',
-  //     },
-  //   ],
-  // },
   {
     title: 'experience',
     info: [
       {
-        title: 'Freelance Developer',
-        stage: 'September 2024 - Current',
-      },
-      {
         title: 'Wordpress Developer Intern - Josh Kirk Inc',
         stage: '2024',
+      },
+      {
+        title: 'Software Developer - iWorQ Systems',
+        stage: 'March 2025 - Current',
       },
     ],
   },
@@ -122,7 +139,7 @@ const About = () => {
             exit='hidden'
             className='h2'
           >
-            Captivating <span className='text-[#19471f]'>stories</span> birth magnificent designs.
+            Turning <span className='text-[#19471f]'>complex problems</span> into elegant solutions.
           </motion.h2>
 
           <motion.p 
@@ -132,7 +149,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            I am a junior full-stack developer with experience in front-end and back-end development using JavaScript, React, Next.js, PHP, Python, and Streamlit. I have worked with complex legacy codebases, overseen code conversion and modernization projects, and performed unit and integration testing to ensure code quality, reliability, and functionality. <br/><br/>I am always looking to expand my knowledge, explore new programming languages, and grow my experience with modern frameworks and technologies while continuing to develop as a software engineer.
           </motion.p>
 
           {/* counters */}
@@ -198,7 +215,15 @@ const About = () => {
                         {/* icons */}
                         {item.icons?.map((icon, itemIndex) => {
                           return (
-                            <div className='text-2xl text-white' key={itemIndex}>{icon}</div>
+                            <div className='relative group text-2xl text-white' key={itemIndex}>
+                                {icon.icon}
+                                <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2
+                                  px-2 py-1 text-xs text-gray-900 bg-gray-300/50 rounded whitespace-nowrap
+                                  opacity-0 group-hover:opacity-100 transition-opacity duration-200
+                                  pointer-events-none z-50'>
+                                  {icon.name}
+                                </span>
+                            </div>
                           )
                         })}
                       </div>

@@ -37,7 +37,7 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            I'm a junior full-stack developer passionate about building functional, user-friendly applications and solving challenging problems through code. <br/><br/>With experience in both front-end and back-end development, I enjoy working across the entire development process, from designing interfaces to building the logic behind them. I'm always learning, exploring new technologies, and looking for opportunities to grow as a developer while creating meaningful solutions.
           </motion.p>
           {/* btn */}
           <motion.div

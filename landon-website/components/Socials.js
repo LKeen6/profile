@@ -5,34 +5,48 @@ import Link from 'next/link';
 import {
   RiInstagramLine,
   RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
 } from 'react-icons/ri';
+import {
+  SiGithub,
+  SiLinkedin
+} from 'react-icons/si';
 
 const Socials = () => {
   return (
     <div className='flex items-center gap-x-5 text-lg'>
 
-      <Link href={''} className='hover:text-[#46dbd4] transition-all duration-300'>
-        <RiInstagramLine/>
-      </Link>
+      <a
+        href="https://www.linkedin.com/in/landon-keen/"
+        onClick={(e) => {
+          e.preventDefault();
+          window.open("https://www.linkedin.com/in/landon-keen/", "LinkedIn", "width=600,height=700");
+        }}
+        className="hover:text-[#46dbd4] transition-all duration-300"
+      >
+        <SiLinkedin />
+      </a>
 
-      <Link href={''} className='hover:text-[#46dbd4] transition-all duration-300'>
-        <RiFacebookLine/>
-      </Link>
+      <a
+        href="https://www.facebook.com/landon.keen.9/"
+        onClick={(e) => {
+          e.preventDefault();
+          window.open("https://www.facebook.com/landon.keen.9/", "Facebook", "width=600,height=700");
+        }}
+        className="hover:text-[#46dbd4] transition-all duration-300"
+      >
+        <RiFacebookLine />
+      </a>
 
-      <Link href={''} className='hover:text-[#46dbd4] transition-all duration-300'>
-       <RiDribbbleLine/>
-      </Link>
-
-      <Link href={''} className='hover:text-[#46dbd4] transition-all duration-300'>
-        <RiBehanceLine/>
-      </Link>
-
-      <Link href={''} className='hover:text-[#46dbd4] transition-all duration-300'>
-        <RiPinterestLine/>
-      </Link>
+      <a
+        href="https://github.com/LKeen6"
+        onClick={(e) => {
+          e.preventDefault();
+          window.open("https://github.com/LKeen6", "GitHub", "width=600,height=700");
+        }}
+        className="hover:text-[#46dbd4] transition-all duration-300"
+      >
+        <SiGithub />
+      </a>
 
     </div>
   );
