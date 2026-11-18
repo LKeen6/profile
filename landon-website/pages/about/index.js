@@ -91,7 +91,12 @@ const aboutData = [
       {
         title: 'Web & Mobile Development - Btech College, UT',
         stage: '2024',
-      },
+        link: '',
+      }, {
+        title: 'Master Streamlit: Build Interactive Data Apps with Python Udemy',
+        stage: '2026',
+        link: 'https://www.udemy.com/certificate/UC-e0d0d481-e8e2-49ff-91ad-a51f65bb4f3d/',
+      }
     ],
   },
 ];
@@ -111,7 +116,25 @@ import { BsBootstrap } from 'react-icons/bs';
 const About = () => {
   
   const [index, setIndex] = useState(0);
-  console.log(index);
+  const openCredential = (event, url) => {
+    event.preventDefault();
+
+    const width = 900;
+    const height = 700;
+    const left = Math.max(0, (window.screen.width - width) / 2);
+    const top = Math.max(0, (window.screen.height - height) / 2);
+
+    const popup = window.open(
+      url,
+      '_blank',
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    );
+
+    if (!popup) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     
     <div className='w-screen h-screen bg-[#a39968] bg-gradient-to-r from-primary/5 via-black/5 to-black/40 py-32 text-center xl:text-left'>
@@ -182,7 +205,7 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
+          className='relative z-20 flex flex-col w-full xl:max-w-[48%] h-[480px]'
         >
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
@@ -204,11 +227,24 @@ const About = () => {
             <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
               {aboutData[index].info.map((item, itemIndex) => {
                 return (
-                  <div key={itemIndex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'>
+                  <div key={itemIndex} className='w-full flex flex-col md:flex-row md:justify-start md:items-center md:gap-x-3 py-2 text-white/60'>
                     {/* title */}
-                    <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-                      <div className='hidden md:flex'></div>
-                      <div>{item.stage}</div>
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        onClick={(event) => openCredential(event, item.link)}
+                        className='font-light leading-relaxed text-center md:text-left max-w-[290px] md:max-w-[420px] xl:max-w-[390px] mb-2 md:mb-0 underline decoration-white/30 underline-offset-4 hover:text-[#46dbd4] hover:decoration-[#46dbd4] transition-colors'
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <div className='font-light leading-relaxed text-center md:text-left max-w-[290px] md:max-w-[420px] xl:max-w-[390px] mb-2 md:mb-0'>
+                        {item.title}
+                      </div>
+                    )}
+                      <div className='shrink-0 px-2 py-1 rounded-md border border-white/20 text-xs text-white/80 whitespace-nowrap'>{item.stage}</div>
                       <div className='flex gap-x-4'>
                         {/* icons */}
                         {item.icons?.map((icon, itemIndex) => {

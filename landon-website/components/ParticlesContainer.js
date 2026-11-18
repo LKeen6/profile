@@ -14,7 +14,7 @@ const ParticlesContainer = () => {
 
   return (
   <Particles 
-    className='w-full h-full absolute translate-z-0'
+    className='fixed inset-0 z-0 translate-z-0 pointer-events-none'
     id='tsparticles' 
     init={particlesInit} 
     loaded={particlesLoaded}
