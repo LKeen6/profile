@@ -25,7 +25,7 @@ const Work = () => {
                 initial="hidden"
                 animate="show"
                 exit="hidden"
-                className="h2 xl:mt-12"
+                className="h2 xl:mt-12 mt-28"
               >
                 My work <span className="text-[#a39968]">.</span>
               </motion.h2>

@@ -1,4 +1,3 @@
-// links
 import Link from 'next/link';
 
 //icons

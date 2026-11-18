@@ -58,18 +58,18 @@ const WorkSlider = () => {
   };
 
   return (
-    <div>
+    <div className="h-[500px] p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 rounded-lg">
       <Swiper
-        spaceBetween={10}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="h-[280px] sm:h-[480px]"
+        className="h-full"
       >
         {workSlider.slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+            <div className="overflow-y-auto max-h-[420px] grid grid-cols-1 sm:grid-cols-2 gap-6">
               {slide.images.map((image, index) => (
                 <button
                   type="button"

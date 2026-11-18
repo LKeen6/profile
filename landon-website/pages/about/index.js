@@ -98,7 +98,6 @@ const aboutData = [
 
 //components
 import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
 
 // framer motion
 import {motion} from 'framer-motion';
@@ -115,10 +114,9 @@ const About = () => {
   console.log(index);
   return (
     
-    <div className='h-full bg-[#a39968] bg-gradient-to-r from-primary/5 via-black/5 to-black/40 py-32 text-center xl:text-left'>
+    <div className='w-screen h-screen bg-[#a39968] bg-gradient-to-r from-primary/5 via-black/5 to-black/40 py-32 text-center xl:text-left'>
        {/* Particles */}
-       <ParticlesContainer className="absolute top-0 left-0 w-full h-full z-0" />
-      <Circles/>
+       <ParticlesContainer/>
       {/* avatar img */}
       <motion.div 
         variants={fadeIn('right', 0.2)}
@@ -161,20 +159,20 @@ const About = () => {
             className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'
           >
             <div className='flex flex-1 xl: gap-x-6'>
-            {/* experience */}
+            {/* experience
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl front-extrabold text-[#19471f] mb-2'>
                   <CountUp start={0} end={3} duration={10} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100]'>Years of experience</div>
-              </div>
-              {/* finished projects */}
+              </div> */}
+              {/* finished projects
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl front-extrabold text-[#19471f] mb-2'>
                   <CountUp start={0} end={10} duration={10} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100]'>finished projects</div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
